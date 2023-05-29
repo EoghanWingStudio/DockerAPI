@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  dokerapi:
+    image: ${DOCKER_REGISTRY-}dokerapi
+    build:
+      context: .
+      dockerfile: DokerAPI/Dockerfile
+    ports:
+    - "4015:443"
